@@ -22,3 +22,9 @@ Route::get('/waiting-a-rainy-day-070922', function(){
 Route::get('/login', function(){
     return view('templates.login');
 });
+// Route::post('/rainy-day', function(){
+//     return view('templates.rainy-day');
+// });
+Route::post('/rainy-day', function(){
+    return view('templates.rainy-day');
+});

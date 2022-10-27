@@ -31,20 +31,25 @@
 
     <div id="id01" class="modal">
     
-    <form class="modal-content animate" action="/action_page.php" method="post">
+    <form class="modal-content animate" action="/rainy-day" method="post">
         <div class="imgcontainer">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Dong yeu cau">&times;</span>
         <img src="/images/img_avatar2.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="fullname"><b>Ho va ten</b></label>
+        <input type="text" placeholder="Nhap ho va ten" name="fullname" required>
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-            
-        <button type="submit">Dong y</button>
+        <label for="dateofbirth"><b>Ngay sinh</b></label>
+        <input type="date" placeholder="Nhap ngay sinh" name="dateofbirth" required>
+        
+        <label for="jormar"><b>Nganh hoc</b></label>
+        <input type="text" name="jormar" id="" required placeholder="Nhap nganh hoc">
+
+        <label for="year">Nam hoc</label>
+        <input type="number" name="year" id="" required placeholder="Nhap nam hoc">
+        <button type="submit" onclick="testOK()" id="okrainy">Dong y</button>
         </div>
 
         <div class="container" style="background: #ebf5fc; border-radius: 10px;        
@@ -97,6 +102,11 @@
   
     <script type="text/javascript" src="{{ URL::to('/js/anime.min.js') }}">
 
+    </script>
+    <script>
+        function testOk(){
+            document.getElementById('okrainy').innerHTML= alert('Thank ban da dong y!'); 
+        }
     </script>
     
     
